@@ -1,0 +1,22 @@
+Silo
+
+A user-friendly Chrome extension to modify game elements in Farm Merge Valley on Discord.
+Silo connects to the active Discord tab, attaches the Chrome debugger,
+and captures the in-game services after the first object movement.
+Once initialized, you can trigger resource injections directly from the extension popup.
+
+Installation:
+* Download the project and extract the archive
+* Open Chrome and navigate to chrome://extensions/
+* Enable Developer Mode (top-right toggle)
+* Click "Load unpacked" and select the extracted project folder
+
+Usage:
+* Open Farm Merge Valley on Discord
+* Click Initialize in the extension popup
+* Select a resource, set the amount, and click Inject
+
+Troubleshooting:
+* Debugger detaches        : reload the Discord tab and click Initialize again
+* No active tab found      : make sure Farm Merge Valley is open before initializing
+* Resources not injected   : verify the resource name and amount are valid

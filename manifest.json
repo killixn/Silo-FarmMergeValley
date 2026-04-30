@@ -1,0 +1,33 @@
+{
+    "manifest_version": 3,
+    "name": "Silo",
+    "version": "1.0.0",
+    "description": "A user-friendly Chrome extension to modify game elements in Farm Merge Valley on Discord",
+    "permissions": [
+        "debugger",
+        "tabs",
+        "activeTab",
+        "scripting"
+    ],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": {
+            "16": "icons/icon.png",
+            "48": "icons/icon.png",
+            "128": "icons/icon.png"
+        }
+    },
+    "icons": {
+        "16": "icons/icon.png",
+        "48": "icons/icon.png",
+        "128": "icons/icon.png"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "host_permissions": [
+        "https://discord.com/*",
+        "https://*.discordapp.com/*",
+        "https://*.discord.com/*"
+    ]
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Silo</title>
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+
+    <div class="banner">
+        <img src="https://www.pogo.com/static/v2/media/src/assets/games/farmvalley_h5/spotlightGame__3dFfb.jpg" alt="Farm Merge Valley">
+        <div class="banner-label">Silo</div>
+    </div>
+
+    <div class="tabs">
+        <button class="tab active" data-tab="main">Injector</button>
+        <button class="tab" data-tab="logs">Logs</button>
+        <button class="tab" data-tab="help">Help</button>
+    </div>
+
+    <div class="container">
+
+        <!-- MAIN TAB -->
+        <div id="tab-main" class="tab-content active">
+
+            <div class="field-group">
+                <label for="resource">Resource</label>
+                <select id="resource">
+                    <optgroup label="Currency">
+                        <option value="coins">Coins</option>
+                        <option value="gems">Gems</option>
+                    </optgroup>
+                    <optgroup label="Progression">
+                        <option value="exp">Experience</option>
+                        <option value="energy">Energy</option>
+                        <option value="tickets">Tickets</option>
+                        <option value="crates">Crates</option>
+                    </optgroup>
+                    <optgroup label="Others">
+                        <option value="wheat">Wheat</option>
+                        <option value="sunflower">Sunflower</option>
+                        <option value="sugarcane">Sugarcane</option>
+                        <option value="carrot">Carrot</option>
+                        <option value="soybeans">Soybeans</option>
+                        <option value="corn">Corn</option>
+                        <option value="coffeebeans">Coffee Beans</option>
+                        <option value="tomato">Tomato</option>
+                        <option value="avocado">Avocado</option>
+                        <option value="truffle">Truffle</option>
+                        <option value="egg">Egg</option>
+                        <option value="milk">Milk</option>
+                        <option value="bacon">Bacon</option>
+                        <option value="goatmilk">Goat Milk</option>
+                        <option value="wool">Wool</option>
+                        <option value="fur">Fur</option>
+                    </optgroup>
+                </select>
+            </div>
+
+            <div class="field-group">
+                <label for="amount">Amount</label>
+                <div class="amount-row">
+                    <input type="text" id="amount" value="100" autocomplete="off" inputmode="numeric" maxlength="4">
+                    <div class="quick-amounts">
+                        <button class="quick-btn" data-val="1">1</button>
+                        <button class="quick-btn" data-val="10">10</button>
+                        <button class="quick-btn" data-val="100">100</button>
+                        <button class="quick-btn" data-val="500">500</button>
+                        <button class="quick-btn" data-val="9999">Max</button>
+                    </div>
+                </div>
+                <span id="amount-error" class="field-error"></span>
+            </div>
+
+            <div class="action-row">
+                <button id="btn-init" class="btn btn-secondary">Initialize</button>
+                <button id="btn-inject" class="btn btn-primary" disabled>Inject</button>
+            </div>
+
+            <div id="init-status" class="inline-status"></div>
+            <div id="inject-feedback" class="inject-feedback"></div>
+
+        </div>
+
+        <!-- LOGS TAB -->
+        <div id="tab-logs" class="tab-content">
+            <div class="logs-header">
+                <span class="logs-title">Session Logs</span>
+                <button id="btn-clear-logs" class="btn-text">Clear</button>
+            </div>
+            <div id="log-box" class="log-box">
+                <span class="log-placeholder">No logs yet...</span>
+            </div>
+        </div>
+
+        <!-- HELP TAB -->
+        <div id="tab-help" class="tab-content">
+            <ol class="help-list">
+                <li>Start <strong>Farm Merge Valley</strong> on Discord.</li>
+                <li>Click <strong>Initialize</strong> and wait for the confirmation.</li>
+                <li>Select a resource, set the amount, and click <strong>Inject</strong>.</li>
+            </ol>
+            <div class="help-note">
+                The session persists as long as the Discord tab stays open. Re-initialize if you reload the game.
+            </div>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        Made by <a href="https://github.com/AstraaDev" target="_blank">a5traa</a>
+    </footer>
+
+    <script src="popup.js"></script>
+</body>
+</html>
